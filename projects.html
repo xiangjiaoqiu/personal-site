@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>项目 · 香蕉球</title>
+  <meta name="description" content="香蕉球的项目列表：做过什么、用了什么技术、代码在哪里。">
+  <link rel="canonical" href="https://xiangjiaoqiu.github.io/personal-site/projects.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xiangjiaoqiu.github.io/personal-site/projects.html">
+  <meta property="og:title" content="项目 · 香蕉球">
+  <meta property="og:description" content="香蕉球的项目列表：做过什么、用了什么技术、代码在哪里。">
+  <meta property="og:image" content="https://xiangjiaoqiu.github.io/personal-site/assets/avatar.svg">
+  <meta property="og:locale" content="zh_CN">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#4f46e5">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>.reveal { opacity: 1; transform: none; }</style>
+  </noscript>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav__logo" href="index.html" aria-label="回到首页">香蕉球</a>
+      <button id="nav-toggle" class="nav__toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="about.html">关于</a></li>
+        <li><a class="nav__link" href="skills.html">技能</a></li>
+        <li><a class="nav__link" href="projects.html" aria-current="page">项目</a></li>
+        <li><a class="nav__link" href="experience.html">经历</a></li>
+        <li><a class="nav__link" href="contact.html">联系</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" type="button"
+                  aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <h1 class="page-hero__title">项目</h1>
+        <p class="page-hero__sub">我做过什么</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="projects-grid">
+        <!-- 项目卡片 1：真实项目（本网站） -->
+        <article class="card project-card reveal">
+          <!-- 截图占位：替换为真实截图，如 assets/project-1.png -->
+          <div class="project-card__shot" role="img"
+               aria-label="个人网站首页截图占位图">
+            <span aria-hidden="true">🍌</span>
+            <small>截图占位 · 待替换</small>
+          </div>
+
+          <div class="card__body">
+            <h2 class="card__title">个人自我介绍网站</h2>
+            <p class="card__text">
+              就是你现在看到的这个网站——从零编写的多页静态个人主页，
+              包含自我介绍、技能、项目、经历与联系方式，支持深色模式与移动端适配。
+            </p>
+            <ul class="tag-list" aria-label="技术栈">
+              <li class="tag">HTML5</li>
+              <li class="tag">CSS3</li>
+              <li class="tag">JavaScript</li>
+            </ul>
+            <!-- TODO(待替换)：替换为真实的 GitHub 仓库链接（your-username 改为 xiangjiaoqiu 或实际仓库地址） -->
+            <div class="project-card__links">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/xiangjiaoqiu/personal-site" target="_blank"
+                 rel="noopener noreferrer">
+                GitHub 仓库<span aria-hidden="true"> ↗</span>
+              </a>
+              <a class="btn btn--small btn--ghost" href="index.html">
+                在线预览<span aria-hidden="true"> ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 香蕉球 · 深圳</p>
+      <p class="site-footer__meta">纯 HTML / CSS / JS 构建 · 托管于 GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

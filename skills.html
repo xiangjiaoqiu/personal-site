@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>技能 · 香蕉球</title>
+  <meta name="description" content="香蕉球的技能清单：按语言、前端、后端、工具分类展示。">
+  <link rel="canonical" href="https://xiangjiaoqiu.github.io/personal-site/skills.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xiangjiaoqiu.github.io/personal-site/skills.html">
+  <meta property="og:title" content="技能 · 香蕉球">
+  <meta property="og:description" content="香蕉球的技能清单：按语言、前端、后端、工具分类展示。">
+  <meta property="og:image" content="https://xiangjiaoqiu.github.io/personal-site/assets/avatar.svg">
+  <meta property="og:locale" content="zh_CN">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#4f46e5">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>.reveal { opacity: 1; transform: none; }</style>
+  </noscript>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav__logo" href="index.html" aria-label="回到首页">香蕉球</a>
+      <button id="nav-toggle" class="nav__toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="about.html">关于</a></li>
+        <li><a class="nav__link" href="skills.html" aria-current="page">技能</a></li>
+        <li><a class="nav__link" href="projects.html">项目</a></li>
+        <li><a class="nav__link" href="experience.html">经历</a></li>
+        <li><a class="nav__link" href="contact.html">联系</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" type="button"
+                  aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <h1 class="page-hero__title">技能</h1>
+        <p class="page-hero__sub">我会哪些东西</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <!-- TODO(待替换)：以下技能分类与标签均为占位内容，请替换为真实掌握的技能 -->
+      <div class="skills-grid">
+        <article class="card skill-card reveal">
+          <h2 class="card__title"><span aria-hidden="true">🗣️</span> 语言</h2>
+          <ul class="tag-list" aria-label="语言类技能">
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card reveal">
+          <h2 class="card__title"><span aria-hidden="true">🎨</span> 前端</h2>
+          <ul class="tag-list" aria-label="前端技能">
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card reveal">
+          <h2 class="card__title"><span aria-hidden="true">⚙️</span> 后端</h2>
+          <ul class="tag-list" aria-label="后端技能">
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card reveal">
+          <h2 class="card__title"><span aria-hidden="true">🛠️</span> 工具</h2>
+          <ul class="tag-list" aria-label="工具类技能">
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+            <li class="tag tag--placeholder">待替换</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 香蕉球 · 深圳</p>
+      <p class="site-footer__meta">纯 HTML / CSS / JS 构建 · 托管于 GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

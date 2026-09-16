@@ -130,7 +130,7 @@ a { color: var(--color-primary-strong); }
 }
 
 .nav__link:hover,
-.nav__link[aria-current="true"] {
+.nav__link[aria-current="page"] {
   color: var(--color-primary-strong);
   background: var(--color-primary-soft);
 }
@@ -212,6 +212,58 @@ html:not([data-theme="dark"]) .theme-toggle__icon--moon { display: block; }
   text-align: center;
   padding-block: 3rem;
 }
+
+/* ---------- 首页入口卡片 ---------- */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.home-card {
+  display: block;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+}
+.home-card__icon { font-size: 1.8rem; line-height: 1; }
+.home-card__title { font-size: 1.05rem; margin: 0.5rem 0 0.25rem; }
+.home-card p { margin: 0; color: var(--color-text-muted); font-size: 0.85rem; }
+
+/* ---------- 子页面页头 ---------- */
+.page-hero {
+  padding: 3.5rem 0 2.75rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--color-bg-tinted), var(--color-bg));
+}
+.page-hero__title {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  margin: 0 0 0.4rem;
+}
+.page-hero__sub { color: var(--color-text-muted); margin: 0; }
+
+/* ---------- 404 页 ---------- */
+.error-page {
+  min-height: calc(100svh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 2rem;
+}
+.error-page__code {
+  font-size: clamp(4.5rem, 18vw, 7.5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  color: var(--color-primary);
+  opacity: 0.85;
+}
+.error-page__title { font-size: 1.4rem; margin: 0; }
+.error-page__text { color: var(--color-text-muted); margin: 0 0 1rem; }
 
 .hero__avatar {
   width: 128px;

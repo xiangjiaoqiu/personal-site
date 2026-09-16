@@ -11,16 +11,16 @@
   <meta name="author" content="香蕉球">
   <meta name="keywords" content="香蕉球, 深圳大学, 本科生, 个人主页">
 
+  <!-- 站点规范地址 -->
+  <link rel="canonical" href="https://xiangjiaoqiu.github.io/personal-site/">
+
   <!-- Open Graph（社交媒体分享卡片） -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bananaball.com/">
+  <meta property="og:url" content="https://xiangjiaoqiu.github.io/personal-site/">
   <meta property="og:title" content="香蕉球 · 深圳大学本科生">
   <meta property="og:description" content="帅气逼人的深圳大学本科生。了解我的技能、项目与经历，欢迎联系交流。">
-  <meta property="og:image" content="https://bananaball.com/assets/avatar.svg">
+  <meta property="og:image" content="https://xiangjiaoqiu.github.io/personal-site/assets/avatar.svg">
   <meta property="og:locale" content="zh_CN">
-
-  <!-- 站点规范地址（自定义域名） -->
-  <link rel="canonical" href="https://bananaball.com/">
 
   <!-- Favicon：内嵌 SVG，香蕉主题 -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -50,10 +50,10 @@
 </head>
 <body>
 
-  <!-- ===================== 顶部导航 ===================== -->
+  <!-- ===================== 顶部导航（全站共用，当前页高亮） ===================== -->
   <header class="site-header">
     <nav class="nav container" aria-label="主导航">
-      <a class="nav__logo" href="#hero" aria-label="回到顶部">香蕉球</a>
+      <a class="nav__logo" href="index.html" aria-label="回到首页">香蕉球</a>
 
       <!-- 汉堡按钮（移动端） -->
       <button id="nav-toggle" class="nav__toggle" type="button"
@@ -65,11 +65,12 @@
       </button>
 
       <ul id="nav-menu" class="nav__menu">
-        <li><a class="nav__link" href="#about">关于</a></li>
-        <li><a class="nav__link" href="#skills">技能</a></li>
-        <li><a class="nav__link" href="#projects">项目</a></li>
-        <li><a class="nav__link" href="#timeline">经历</a></li>
-        <li><a class="nav__link" href="#contact">联系</a></li>
+        <li><a class="nav__link" href="index.html" aria-current="page">首页</a></li>
+        <li><a class="nav__link" href="about.html">关于</a></li>
+        <li><a class="nav__link" href="skills.html">技能</a></li>
+        <li><a class="nav__link" href="projects.html">项目</a></li>
+        <li><a class="nav__link" href="experience.html">经历</a></li>
+        <li><a class="nav__link" href="contact.html">联系</a></li>
         <!-- 深色模式切换 -->
         <li>
           <button id="theme-toggle" class="theme-toggle" type="button"
@@ -83,7 +84,7 @@
   </header>
 
   <main>
-    <!-- ===================== 1. Hero 首屏 ===================== -->
+    <!-- ===================== Hero 首屏 ===================== -->
     <section id="hero" class="hero container">
       <div class="hero__content reveal">
         <!-- 头像：无真实照片，使用首字母生成的 SVG；替换真实头像后改 src 为 assets/avatar.jpg -->
@@ -99,198 +100,49 @@
         </p>
 
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#projects">查看项目</a>
-          <!-- TODO(待替换)：放入真实简历后，删除 download-on-placeholder.js 的拦截逻辑 -->
+          <a class="btn btn--primary" href="projects.html">查看项目</a>
+          <!-- TODO(待替换)：放入真实简历后，删除 script.js 中 download-on-placeholder 的拦截逻辑 -->
           <a class="btn btn--ghost" id="resume-link" href="assets/resume.pdf" download>
             下载简历
           </a>
-          <a class="btn btn--ghost" href="#contact">联系我</a>
+          <a class="btn btn--ghost" href="contact.html">联系我</a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== 2. 关于我 ===================== -->
-    <section id="about" class="section container" aria-labelledby="about-title">
-      <h2 id="about-title" class="section__title reveal">关于我</h2>
-      <div class="section__body reveal">
-        <p>
-          你好！我是<strong>香蕉球</strong>，目前是<strong>深圳大学</strong>的一名本科生，
-          生活和学习在<strong>深圳</strong>。
-        </p>
-        <p>
-          <!-- TODO(待替换)：补充你的专业方向、兴趣爱好、正在学习的内容等真实信息 -->
-          <span class="placeholder-note">【待替换】这里可以介绍你的专业、正在学习的方向和兴趣爱好。</span>
-        </p>
-        <p>
-          这个网站是我从零搭建的个人主页，用纯 HTML、CSS 和 JavaScript 完成，
-          也是我目前唯一收录的项目——以后有新作品会持续更新在这里。
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================== 3. 技能 ===================== -->
-    <section id="skills" class="section section--tinted" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title" class="section__title reveal">技能</h2>
-
-        <!-- TODO(待替换)：以下技能分类与标签均为占位内容，请替换为真实掌握的技能 -->
-        <div class="skills-grid">
-          <article class="card skill-card reveal">
-            <h3 class="card__title"><span aria-hidden="true">🗣️</span> 语言</h3>
-            <ul class="tag-list" aria-label="语言类技能">
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-            </ul>
-          </article>
-
-          <article class="card skill-card reveal">
-            <h3 class="card__title"><span aria-hidden="true">🎨</span> 前端</h3>
-            <ul class="tag-list" aria-label="前端技能">
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-            </ul>
-          </article>
-
-          <article class="card skill-card reveal">
-            <h3 class="card__title"><span aria-hidden="true">⚙️</span> 后端</h3>
-            <ul class="tag-list" aria-label="后端技能">
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-            </ul>
-          </article>
-
-          <article class="card skill-card reveal">
-            <h3 class="card__title"><span aria-hidden="true">🛠️</span> 工具</h3>
-            <ul class="tag-list" aria-label="工具类技能">
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-              <li class="tag tag--placeholder">待替换</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 4. 项目 ===================== -->
-    <section id="projects" class="section container" aria-labelledby="projects-title">
-      <h2 id="projects-title" class="section__title reveal">项目</h2>
-
-      <div class="projects-grid">
-        <!-- 项目卡片 1：真实项目（本网站） -->
-        <article class="card project-card reveal">
-          <!-- 截图占位：替换为真实截图，如 assets/project-1.png -->
-          <div class="project-card__shot" role="img"
-               aria-label="个人网站首页截图占位图">
-            <span aria-hidden="true">🍌</span>
-            <small>截图占位 · 待替换</small>
-          </div>
-
-          <div class="card__body">
-            <h3 class="card__title">个人自我介绍网站</h3>
-            <p class="card__text">
-              就是你现在看到的这个网站——从零编写的单页静态个人主页，
-              包含自我介绍、技能、项目、经历与联系方式，支持深色模式与移动端适配。
-            </p>
-            <ul class="tag-list" aria-label="技术栈">
-              <li class="tag">HTML5</li>
-              <li class="tag">CSS3</li>
-              <li class="tag">JavaScript</li>
-            </ul>
-            <!-- TODO(待替换)：替换为真实的 GitHub 仓库链接 -->
-            <div class="project-card__links">
-              <a class="btn btn--small btn--ghost"
-                 href="https://github.com/your-username/personal-site" target="_blank"
-                 rel="noopener noreferrer">
-                GitHub（待替换）<span aria-hidden="true"> ↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===================== 5. 经历（时间线） ===================== -->
-    <section id="timeline" class="section section--tinted" aria-labelledby="timeline-title">
-      <div class="container">
-        <h2 id="timeline-title" class="section__title reveal">经历</h2>
-
-        <ol class="timeline">
-          <!-- 真实信息：深圳大学本科在读（入学年份未知，标注待替换） -->
-          <li class="timeline__item reveal">
-            <p class="timeline__date">20XX 年 — 至今 <span class="placeholder-note">（入学年份待替换）</span></p>
-            <h3 class="timeline__title">深圳大学 · 本科在读</h3>
-            <p class="timeline__text">
-              <!-- TODO(待替换)：补充专业名称、年级等真实信息 -->
-              <span class="placeholder-note">【待替换】专业名称、所在学院、年级。</span>
-            </p>
-          </li>
-
-          <!-- 占位时间线节点：删除或替换为真实经历 -->
-          <li class="timeline__item reveal">
-            <p class="timeline__date">时间待替换</p>
-            <h3 class="timeline__title">【待替换】一段经历标题</h3>
-            <p class="timeline__text">
-              <span class="placeholder-note">【待替换】这里可以写竞赛、社团、实习或课程项目经历。不添加任何虚构内容。</span>
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===================== 6. 联系 ===================== -->
-    <section id="contact" class="section container" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="section__title reveal">联系我</h2>
-
-      <div class="contact-grid">
-        <!-- 直接联系方式 -->
-        <div class="contact-info reveal">
-          <p>想和我交流？欢迎通过以下方式联系我，我会尽快回复。</p>
-          <ul class="contact-list">
-            <li>
-              <span aria-hidden="true">📧</span>
-              <a href="mailto:2678173639@qq.com">2678173639@qq.com</a>
-            </li>
-            <!-- TODO(待替换)：填入真实 GitHub 主页后移除 aria-disabled -->
-            <li aria-disabled="true">
-              <span aria-hidden="true">🐙</span>
-              <span>GitHub：<span class="placeholder-note">待替换</span></span>
-            </li>
-            <!-- TODO(待替换)：可按需添加博客 / 知乎 / B站等社交链接 -->
-            <li>
-              <span aria-hidden="true">🔗</span>
-              <span>其他社交链接：<span class="placeholder-note">待替换</span></span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- 简易联系表单：静态站点无后端，提交时唤起邮件客户端（mailto） -->
-        <form id="contact-form" class="card contact-form reveal" novalidate>
-          <div class="field">
-            <label for="cf-name">你的称呼</label>
-            <input id="cf-name" name="name" type="text" required
-                   autocomplete="name" placeholder="怎么称呼你？">
-          </div>
-          <div class="field">
-            <label for="cf-email">你的邮箱</label>
-            <input id="cf-email" name="email" type="email" required
-                   autocomplete="email" placeholder="用于接收我的回复">
-          </div>
-          <div class="field">
-            <label for="cf-message">想说的话</label>
-            <textarea id="cf-message" name="message" rows="4" required
-                      placeholder="想聊点什么？"></textarea>
-          </div>
-          <button class="btn btn--primary" type="submit">发送邮件 ✉️</button>
-          <p class="contact-form__hint">提交后将打开你本机的邮件客户端（mailto 方式）。</p>
-        </form>
+    <!-- ===================== 站内入口卡片 ===================== -->
+    <section class="section container" aria-label="站内导航">
+      <div class="home-cards">
+        <a class="card home-card reveal" href="about.html">
+          <span class="home-card__icon" aria-hidden="true">👤</span>
+          <h2 class="home-card__title">关于</h2>
+          <p>我是谁，在做什么</p>
+        </a>
+        <a class="card home-card reveal" href="skills.html">
+          <span class="home-card__icon" aria-hidden="true">🧩</span>
+          <h2 class="home-card__title">技能</h2>
+          <p>我会哪些东西</p>
+        </a>
+        <a class="card home-card reveal" href="projects.html">
+          <span class="home-card__icon" aria-hidden="true">💻</span>
+          <h2 class="home-card__title">项目</h2>
+          <p>我做过什么</p>
+        </a>
+        <a class="card home-card reveal" href="experience.html">
+          <span class="home-card__icon" aria-hidden="true">🎓</span>
+          <h2 class="home-card__title">经历</h2>
+          <p>我走过的路</p>
+        </a>
+        <a class="card home-card reveal" href="contact.html">
+          <span class="home-card__icon" aria-hidden="true">✉️</span>
+          <h2 class="home-card__title">联系</h2>
+          <p>怎么找到我</p>
+        </a>
       </div>
     </section>
   </main>
 
-  <!-- ===================== 7. 页脚 ===================== -->
+  <!-- ===================== 页脚（全站共用） ===================== -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year">2026</span> 香蕉球 · 深圳</p>

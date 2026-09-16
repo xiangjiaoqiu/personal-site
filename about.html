@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>关于我 · 香蕉球</title>
+  <meta name="description" content="关于香蕉球：深圳大学本科生，坐标深圳。我的介绍、兴趣与正在学习的方向。">
+  <link rel="canonical" href="https://xiangjiaoqiu.github.io/personal-site/about.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xiangjiaoqiu.github.io/personal-site/about.html">
+  <meta property="og:title" content="关于我 · 香蕉球">
+  <meta property="og:description" content="深圳大学本科生，坐标深圳。我的介绍、兴趣与正在学习的方向。">
+  <meta property="og:image" content="https://xiangjiaoqiu.github.io/personal-site/assets/avatar.svg">
+  <meta property="og:locale" content="zh_CN">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#4f46e5">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>.reveal { opacity: 1; transform: none; }</style>
+  </noscript>
+</head>
+<body>
+
+  <!-- 顶部导航（全站共用） -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav__logo" href="index.html" aria-label="回到首页">香蕉球</a>
+      <button id="nav-toggle" class="nav__toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="about.html" aria-current="page">关于</a></li>
+        <li><a class="nav__link" href="skills.html">技能</a></li>
+        <li><a class="nav__link" href="projects.html">项目</a></li>
+        <li><a class="nav__link" href="experience.html">经历</a></li>
+        <li><a class="nav__link" href="contact.html">联系</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" type="button"
+                  aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 子页面页头 -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <h1 class="page-hero__title">关于我</h1>
+        <p class="page-hero__sub">认真介绍一下自己</p>
+      </div>
+    </section>
+
+    <!-- 正文 -->
+    <section class="section container">
+      <div class="section__body reveal">
+        <p>
+          你好！我是<strong>香蕉球</strong>，目前是<strong>深圳大学</strong>的一名本科生，
+          生活和学习在<strong>深圳</strong>。
+        </p>
+        <p>
+          <!-- TODO(待替换)：补充你的专业方向、兴趣爱好、正在学习的内容等真实信息 -->
+          <span class="placeholder-note">【待替换】这里可以介绍你的专业、正在学习的方向和兴趣爱好。</span>
+        </p>
+        <p>
+          这个网站是我从零搭建的个人主页，用纯 HTML、CSS 和 JavaScript 完成，
+          也是我目前唯一收录的项目——以后有新作品会持续更新在
+          <a href="projects.html">项目页</a>。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 香蕉球 · 深圳</p>
+      <p class="site-footer__meta">纯 HTML / CSS / JS 构建 · 托管于 GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

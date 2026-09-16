@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>页面未找到 · 香蕉球</title>
+  <meta name="description" content="页面不存在，回到香蕉球的个人主页。">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://xiangjiaoqiu.github.io/personal-site/404.html">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#4f46e5">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav__logo" href="index.html" aria-label="回到首页">香蕉球</a>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="about.html">关于</a></li>
+        <li><a class="nav__link" href="skills.html">技能</a></li>
+        <li><a class="nav__link" href="projects.html">项目</a></li>
+        <li><a class="nav__link" href="experience.html">经历</a></li>
+        <li><a class="nav__link" href="contact.html">联系</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" type="button"
+                  aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="error-page">
+    <p class="error-page__code" aria-hidden="true">404</p>
+    <h1 class="error-page__title">页面走丢了 🍌</h1>
+    <p class="error-page__text">你要找的页面不存在，可能已被移动或删除。</p>
+    <a class="btn btn--primary" href="index.html">回到首页</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 香蕉球 · 深圳</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

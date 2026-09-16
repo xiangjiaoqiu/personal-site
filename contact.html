@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>联系我 · 香蕉球</title>
+  <meta name="description" content="联系香蕉球：邮箱 2678173639@qq.com，或通过表单给我留言。">
+  <link rel="canonical" href="https://xiangjiaoqiu.github.io/personal-site/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xiangjiaoqiu.github.io/personal-site/contact.html">
+  <meta property="og:title" content="联系我 · 香蕉球">
+  <meta property="og:description" content="联系香蕉球：邮箱 2678173639@qq.com，或通过表单给我留言。">
+  <meta property="og:image" content="https://xiangjiaoqiu.github.io/personal-site/assets/avatar.svg">
+  <meta property="og:locale" content="zh_CN">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#4f46e5">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>.reveal { opacity: 1; transform: none; }</style>
+  </noscript>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav__logo" href="index.html" aria-label="回到首页">香蕉球</a>
+      <button id="nav-toggle" class="nav__toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="about.html">关于</a></li>
+        <li><a class="nav__link" href="skills.html">技能</a></li>
+        <li><a class="nav__link" href="projects.html">项目</a></li>
+        <li><a class="nav__link" href="experience.html">经历</a></li>
+        <li><a class="nav__link" href="contact.html" aria-current="page">联系</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" type="button"
+                  aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <h1 class="page-hero__title">联系我</h1>
+        <p class="page-hero__sub">怎么找到我</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="contact-grid">
+        <!-- 直接联系方式 -->
+        <div class="contact-info reveal">
+          <p>想和我交流？欢迎通过以下方式联系我，我会尽快回复。</p>
+          <ul class="contact-list">
+            <li>
+              <span aria-hidden="true">📧</span>
+              <a href="mailto:2678173639@qq.com">2678173639@qq.com</a>
+            </li>
+            <!-- TODO(待替换)：填入真实 GitHub 主页后移除 aria-disabled -->
+            <li aria-disabled="true">
+              <span aria-hidden="true">🐙</span>
+              <span>GitHub：<span class="placeholder-note">待替换</span></span>
+            </li>
+            <!-- TODO(待替换)：可按需添加博客 / 知乎 / B站等社交链接 -->
+            <li>
+              <span aria-hidden="true">🔗</span>
+              <span>其他社交链接：<span class="placeholder-note">待替换</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 简易联系表单：静态站点无后端，提交时唤起邮件客户端（mailto） -->
+        <form id="contact-form" class="card contact-form reveal" novalidate>
+          <div class="field">
+            <label for="cf-name">你的称呼</label>
+            <input id="cf-name" name="name" type="text" required
+                   autocomplete="name" placeholder="怎么称呼你？">
+          </div>
+          <div class="field">
+            <label for="cf-email">你的邮箱</label>
+            <input id="cf-email" name="email" type="email" required
+                   autocomplete="email" placeholder="用于接收我的回复">
+          </div>
+          <div class="field">
+            <label for="cf-message">想说的话</label>
+            <textarea id="cf-message" name="message" rows="4" required
+                      placeholder="想聊点什么？"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">发送邮件 ✉️</button>
+          <p class="contact-form__hint">提交后将打开你本机的邮件客户端（mailto 方式）。</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> 香蕉球 · 深圳</p>
+      <p class="site-footer__meta">纯 HTML / CSS / JS 构建 · 托管于 GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,7 +1,9 @@
 /* =====================================================
-   香蕉球 · 个人主页脚本
-   功能：主题切换、移动端菜单、滚动淡入、导航高亮、
-        占位简历下载拦截、联系表单（mailto）
+   香蕉球 · 个人主页脚本（多页站点共用）
+   功能：主题切换、移动端菜单、滚动淡入、
+        占位简历下载拦截、联系表单（mailto）、页脚年份
+   当前页导航高亮通过各页面 HTML 中的 aria-current="page"
+   静态标注，无需 JS 参与。
    无外部依赖，全部为原生 JavaScript
    ===================================================== */
 (function () {
@@ -102,28 +104,7 @@
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* ---------- 4. 当前导航项高亮 ---------- */
-  var navLinks = document.querySelectorAll('.nav__link');
-  var sections = [];
-  navLinks.forEach(function (link) {
-    var target = document.querySelector(link.getAttribute('href'));
-    if (target) sections.push({ link: link, section: target });
-  });
-
-  if ('IntersectionObserver' in window && sections.length) {
-    var navObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
-        var match = sections.find(function (s) { return s.section === entry.target; });
-        if (match) match.link.setAttribute('aria-current', 'true');
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-
-    sections.forEach(function (s) { navObserver.observe(s.section); });
-  }
-
-  /* ---------- 5. 占位简历下载拦截 ---------- */
+  /* ---------- 4. 占位简历下载拦截 ---------- */
   // 简历尚未替换（assets/resume.pdf 是占位文件），点击时提醒而非下载空文件
   var resumeLink = document.getElementById('resume-link');
   if (resumeLink) {
@@ -135,7 +116,7 @@
     });
   }
 
-  /* ---------- 6. 联系表单：静态站点用 mailto 唤起邮件客户端 ---------- */
+  /* ---------- 5. 联系表单：静态站点用 mailto 唤起邮件客户端 ---------- */
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -169,7 +150,7 @@
     });
   }
 
-  /* ---------- 7. 页脚年份自动更新 ---------- */
+  /* ---------- 6. 页脚年份自动更新 ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
