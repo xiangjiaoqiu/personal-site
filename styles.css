@@ -10,18 +10,18 @@
   --color-primary-strong: #4338ca;
   --color-primary-soft: #eef2ff;
 
-  /* 文字与背景 */
-  --color-bg: #f8fafc;
+  /* 文字与背景（浅色模式为纯白背景，卡片自然融合） */
+  --color-bg: #ffffff;
   --color-bg-elevated: #ffffff;
-  --color-bg-tinted: #f1f5f9;
+  --color-bg-tinted: #ffffff;
   --color-text: #1e293b;
   --color-text-muted: #475569;
-  --color-border: #e2e8f0;
+  --color-border: #e5e7eb;
 
   /* 通用 */
   --radius: 14px;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
-  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.10);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
   --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system,
                "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   --container: 960px;
@@ -417,20 +417,14 @@ html:not([data-theme="dark"]) .theme-toggle__icon--moon { display: block; }
 
 .project-card { overflow: hidden; }
 
-/* 截图占位区域 */
-.project-card__shot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
+/* 项目配图 */
+.project-card__img {
+  width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, var(--color-primary-soft), var(--color-bg-tinted));
-  color: var(--color-text-muted);
-  font-size: 2.5rem;
+  object-fit: cover;
   border-bottom: 1px solid var(--color-border);
 }
-.project-card__shot small { font-size: 0.78rem; }
 
 .project-card__links { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 

@@ -9,11 +9,11 @@
 | 页面 | 文件 | 内容 |
 | --- | --- | --- |
 | 首页 | `index.html` | Hero（头像/姓名/身份/按钮）+ 五个板块入口卡片 |
-| 关于 | `about.html` | 自我介绍 |
-| 技能 | `skills.html` | 按语言/前端/后端/工具分类的技能卡片 |
-| 项目 | `projects.html` | 项目卡片（名称/描述/技术栈/链接/截图占位） |
-| 经历 | `experience.html` | 时间线形式的教育与成长经历 |
-| 联系 | `contact.html` | 邮箱、社交链接、mailto 联系表单 |
+| 关于 | `about.html` | 自我介绍（光电信息科学与工程专业，正在学习 AI） |
+| 技能 | `skills.html` | 语言（中文/英语）与运动（羽毛球/乒乓球/健身） |
+| 项目 | `projects.html` | 项目卡片（名称/描述/技术栈/链接/配图） |
+| 经历 | `experience.html` | 时间线形式的教育经历 |
+| 联系 | `contact.html` | 邮箱与微信号 |
 | 404 | `404.html` | GitHub Pages 自动使用的自定义 404 页 |
 
 全站共用导航栏（当前页自动高亮）与页脚；深色模式设置跨页面保持。
@@ -30,10 +30,10 @@ personal-site/
 ├── contact.html                    # 联系
 ├── 404.html                        # 自定义 404 页
 ├── styles.css                      # 样式（移动端优先，CSS 变量控制主题）
-├── script.js                       # 交互（主题切换 / 菜单 / 滚动淡入 / 表单）
+├── script.js                       # 交互（主题切换 / 菜单 / 滚动淡入）
 ├── assets/
-│   ├── avatar.svg                  # 占位头像（姓名首字生成）—— 待替换
-│   ├── resume.pdf                  # 占位简历 —— 待替换
+│   ├── avatar.svg                  # 占位头像（姓名首字生成）—— 可替换为真实照片
+│   ├── project-1.svg               # 项目配图（网站首页示意图，可换成真实截图）
 │   └── favicon.svg                 # 网站图标
 ├── .github/workflows/deploy.yml    # GitHub Pages 自动部署
 └── README.md
@@ -48,17 +48,12 @@ python -m http.server 8080
 
 或直接双击 `index.html` 打开（子页面跳转同样有效）。
 
-## 如何替换占位内容
-
-所有待替换处都在 HTML 中以 `TODO(待替换)` 或 `【待替换】` 标注，搜索即可：
+## 如何替换可选项
 
 | 内容 | 位置 | 操作 |
 | --- | --- | --- |
-| 真实头像 | `assets/avatar.jpg`（新增） | 放入照片，把各页面 `hero__avatar` 的 `src` 改为 `assets/avatar.jpg` |
-| 真实简历 | `assets/resume.pdf` | 覆盖占位文件；并把 `script.js` 中 `resume-link` 的 `data-ready` 设为 `"true"` |
-| 技能 | `skills.html` | 替换 `tag--placeholder` 标签为真实技能 |
-| 专业/入学年份/经历 | `about.html` + `experience.html` | 替换 `【待替换】` 文本 |
-| GitHub / 社交链接 | `contact.html` | 替换"待替换"占位文本 |
+| 真实头像 | `assets/avatar.jpg`（新增） | 放入照片，把 `index.html` 中 `hero__avatar` 的 `src` 改为 `assets/avatar.jpg` |
+| 项目真实截图 | `assets/project-1.png`（新增） | 替换 `projects.html` 中 `project-card__img` 的 `src` |
 
 ## 部署到 GitHub Pages
 
